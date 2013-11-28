@@ -36,7 +36,7 @@ body, input, select, textarea{
 	color: @textColor;
 }
 body{
-	background:url(../images/body-pattren.jpg) #ffe8c8;
+	background:url(../images/body-pattren.png) #ffe8c8;
 	overflow-x:hidden;
 }
 
@@ -57,9 +57,9 @@ h1{.heading( normal,  35px,  @altFamily, @headingsColor, 0 0 10px);
 	}
 }
 h2{.heading( normal,  33px,  @altFamily, @SubheadingsColor, 0 0 10px);}
-h3{.heading( normal,  25px,  @altFamily, #4b4b4b, 0 0 10px); span{color: @themeColor;}}
+h3{.heading( bold,  25px,  @baseFamily, @themeColor, 0 0 10px);}
 h4{.heading( normal,  21px,  @altFamily, @themeColor, 0 0 10px);}
-h5{.heading( bold,  13px,  @baseFamily, black, 5px 0);}
+h5{.heading( normal,  14px,    @baseFamily, black, 0 0 10px); text-transform:uppercase;}
 
 /* Links
 ______________________*/
@@ -83,9 +83,6 @@ img{
 }
 p{
 	margin-bottom:10px;
-}
-.feature-text{
-	font-size:25px;
 }
 
 /************************
@@ -139,14 +136,16 @@ a.thumbnail{
 ______________________*/
 #header-wrap{
 }
+
 #header{
-	background:white;
+	background:#1353aa;
 
 }
 .header-top{
 	padding:15px 0;
-	.gradient(white, #eee);
-	.box-shadow(5px 0 5px #d7d7d7);
+	background:@headertop;
+	.box-shadow(0 -5px 5px #00346f inset);
+	border-bottom:1px solid @themeColor;
 	position:relative;
 	.btn{
 		line-height:1;
@@ -162,8 +161,8 @@ ______________________*/
 }
 .social-icons{
 	a{
-		color:white;
-		background:@themeColor;
+		color:@headertop;
+		background:@social;
 		width: 25px;
 		height:25px;
 		line-height:25px;
@@ -235,17 +234,11 @@ ______________________*/
 	Banner Settings 
 *************************/
 .banner-wrap{
-	background:url(../images/red-pattren.png);
-	margin-bottom:-100px;
-	padding-bottom:100px;
-	.inner-section{
-		color:white;
-		padding:20px 0;
-		margin:0 auto;
-		p{
-			width:80%;
-			margin:0 auto 10px;
-		}
+	background:url(../images/banner.png);
+	color:white;
+	padding:20px 0;
+	margin:0 auto;
+	p{
 	}
 }
 
@@ -313,6 +306,9 @@ ______________________*/
 	}
 }
 
+.thumbnail-wrap .thumbnail{
+	margin-bottom:10px;
+}
 
 /**********************
 	 Theme Box
@@ -354,48 +350,21 @@ ______________________*/
 *******************************/
 
 .theme-pagination{
-	padding:0;
-	margin:10px 0;
-	li{
-		display:inline;
-		display:inline-block;
-		.disabled:hover,
-		.disabled{
-			color:#c5c5c5;
-			cursor:not-allowed;
-			background:#f0f0f0;
-			border:1px solid #c5c5c5;
-		}
-		
-		a{
-			display:inline-block;
-			line-height:25px;
-			vertical-align:top;
-			margin:0 0 4px;
-			height:25px;
-			width:30px;
-			color: #322c2c;
-			background:#f4f4f4;
-			border:1px solid #c5c5c5;
-			text-align:center;
-			&:hover{
-				background: #f70000;
-				color:white;
-				border:1px solid #bd3636;
-			}
-			&[class^="icon-"]{
-				line-height:23px;
-			}
-		}
-		&.active{
-			a{
-				background: #f70000;
-				color:white;
-				border:1px solid #bd3636;
-			}
+	> li > a{
+		border-color: @borderColor;
+		padding:4px 12px 7px;
+		.gradient(white, #dfdede);
+	}
+	> .active{
+		> a,
+		> a:hover, 
+		> a:focus{
+			border-color: @borderColor;	
+			background:@themeColor-2;
 		}
 	}
-
+	
+	
 }
 ::selection{
 	color:@themeColor;
@@ -415,19 +384,16 @@ ______________________*/
 	margin:0;
 
 }
-.main-content{
-	background:white;
-	padding:26px 15px;
-	margin-bottom:35px;
-	.radius;
-	.box-shadow(0 0 5px rgba(0,0,0,0.25));
-}
 #contents{
 	padding:0 10px 0 0;
 }
 #sidebar{
-	padding:0 0 0 10px;
+	padding:0 0 0 20px;
 }
+.rtl #sidebar{
+	padding:0 20px 0 0;
+}
+
 
 /**********************
 	 Theme Tabs
@@ -440,41 +406,43 @@ ______________________*/
 	> li{
 		> a{
 			margin:0 4px 0 0;
-			.gradient(#d5393b, #ba2729);
-			border:1px solid #7f1206;
-			font-weight:700;
-			padding:6px 15px 3px;
+			background: @tabs;
+			font-family:@thirdFamily;
+			border:1px solid @tabs;
+			padding:1px 15px 3px;
 			font-size: 15px;
 			color:white;
 			&:focus,
 			&:hover{
 				background: white;
 				color: #565755;
-				border-color: @borderColor;
-				border-bottom-color:transparent;
+				border-color:transparent;
 			}
 		}
 		&.active{
 			a{
 				background: white;
 				color: #565755;
-				border-color: @borderColor;
-				border-bottom-color:transparent;
+				border-color:transparent;
+				&:hover,
 				&:focus{
 					background: white;
 					color: #565755;
-					border-color: @borderColor;
-					border-bottom-color:transparent;
+					border-color:transparent;
 				}
 			}
 		}
 	}
 	
 }
+.sidebar-section{
+	.tab-content{
+		background: transparent;
+	}
+}
 .tab-content{
 	padding:15px 9px 10px;
-	border: 1px solid @borderColor;
-	.radius(0 5px 5px);
+	background:white;
 	h3{
 		color:@themeColor;
 	}
@@ -553,9 +521,10 @@ ______________________*/
 }
 
 .theme-btn{
-	.gradient(#d5393b, #b72527);
+	.gradient(#b1d62e, #739302);
 	color:white;
-	border:1px solid #7f1206;
+	text-shadow:1px 1px rgba(0,0,0,0.5);
+	border:1px solid #476e03;
 	.box-shadow(0 1px 0 0 rgba(255,255,255,0.25) inset );
 	&:focus,
 	&:hover{
@@ -699,9 +668,6 @@ ______________________*/
 .sidebar-section{
 	margin-bottom:25px;
 	.white-box{
-		h3{
-			color: @themealt;
-		}
 	}
 }
 .input-group-btn{
@@ -710,9 +676,9 @@ ______________________*/
 	}
 }
 .lead{
-	font-size:20px;
+	font-size:25px;
 	margin-bottom:10px;
-	font-weight:300;
+	font-weight:400;
 }
 .rate-section{
 	font-size:16px;
@@ -728,10 +694,10 @@ ______________________*/
 	}
 }
 .icon-star-empty{
-	color:#afafb4;
+	color:@star;
 }
 .icon-star{
-	color: #eaa200;
+	color: @starActive;
 }
 .fb-like-wrap{
 	padding:15px 0;
@@ -756,7 +722,6 @@ ______________________*/
 	Thumnails Settings 
 *************************/
 .img-thumbnail{
-	border:1px solid transparent;
 	width:100%;
 	.radius(0);
 }
@@ -777,30 +742,38 @@ ______________________*/
 }
 
 .thumbnail-wrap{
-	margin-right:-9px;
+	margin-right:-19px;
 	text-align:center;
 	.thumbnail{
 		text-align:left;
 		border: 1px solid #dfdfdf;
-		width:194px;
-		margin-bottom:39px;
+		width:184px;
+		margin-bottom:19px;
 		margin-right:6px;
 		*margin-right:9px;
 		display:inline-block;
 		vertical-align:top;
 		*float:left;
 		.radius(0);
+		padding: 3px;
+		position:relative;
+		
 		.box-shadow(none);
 		img{
 			display:block;
 			width:100%;
-			margin:0 auto 10px;
+			margin:0 auto;
 		}
 		p{
-			margin-bottom:5px;
-			font-size:12px;
+			margin-bottom:0;
+			color:white;
+			text-transform:uppercase;
 		}
-}
+		.thumbnail-footer{
+			padding:4px;
+			background:@themeColor-2;
+		}
+	}
 }
 .thumbnail-wrap-2{
 	.thumbnail{
@@ -817,6 +790,7 @@ ______________________*/
 	}
 }
 .slider-wrap{
+	margin-bottom:20px;
 	p{
 		margin-bottom:5px;
 		font-size:12px;
@@ -836,6 +810,7 @@ ______________________*/
 		font-size:0;
 	}
 }
+
 .slider-wrap-2{
 	margin-bottom:20px;
 	.bx-wrapper{
@@ -853,6 +828,44 @@ ______________________*/
 	}
 	
 }
+
+.sort-bar{
+	margin-bottom:25px;
+	.radius(6px);
+	.gradient(#e6e6e6, #a7a5a8);
+	border:1px solid #a7a5a8;
+	.box-shadow(0 0 0 1px rgba(255,255,255,0.25) inset );
+	a{
+		color:@textColor;
+		display:inline-block;
+		margin:8px 10px;
+		.icon-caret-down{
+			color:@themeColor;
+		}
+		[class^="icon-"]{
+			line-height:20px;
+		}
+	}
+	.right-side-icons{
+		.active{
+			color: #003399;
+		}
+	}
+}
+
+.search-wrap{
+	background:@footerbg;
+	border-top:1px solid @footerbg;
+	border-bottom:1px solid @footerbg;
+	.box-shadow(0 1px 0 0 #4d97f9 inset, 0 -1px 0 0 #4d97f9 inset;);
+	padding:10px 0;
+	a{
+		line-height:30px;
+		color:white;
+	}
+}
+
+
 .border-section{
 	background:url(../images/border-pattren.png) repeat-x;
 	padding-top:23px;
@@ -924,7 +937,9 @@ ______________________*/
 	Slider Settings 
 *******************************/
 .bx-wrapper .bx-viewport{
-	border-width:10px;
+	border-width:0;
+	background:none;
+	.box-shadow(none);
 	left:0;
 	height:auto !important
 }
@@ -942,7 +957,7 @@ ______________________*/
 		margin-bottom:10px;
 	}
 	a{
-		color: #999;
+		color: @footertext;
 		&:hover{
 			color: @linkHoverColor;
 		}
@@ -952,7 +967,7 @@ ______________________*/
 	.social-icons{
 		margin-bottom:20px;
 		a{
-			color: white;
+			color: @footerbg;
 			&:hover{
 				color: @themeColor;
 			}
@@ -963,11 +978,8 @@ ______________________*/
 	}
 }
 #footer{
-	background:#1d1d1d;
+	background:@footerbg;
 	padding:30px 0;
-	h3{
-		color:white;
-	}
 	.feature-section a{
 		color: @linkHoverColor;
 	}
@@ -978,78 +990,52 @@ ______________________*/
 	}
 	.social-icons{
 	}
+	p{
+		color:@footertext;
+	}
 	.footer-text{
-		color:white;
+		color:@footertext;
+	}
+	.form-inline{
+		margin-bottom:25px;
 	}
 }
 
 .feature-section{
-	margin-bottom:13px;
-	&:last-child{
-		border-bottom:none;
-		.box-shadow(none);
-	}
+	margin-bottom:10px;
 	.feature-text{
-		font-size:13px;
-	}
-}
-.tab-content{
-	.feature-section{
-		border-top:1px solid @borderColor;
-		padding-top:15px;
-		&:first-child{
-			border-top:none;
-			padding-top:0;
+		margin-top:9px;
+		color:#010101;
+		font-family: @forthFamily;
+		h5,
+		p{
+			margin-bottom:5px;
+		}
+		span{
+			color:@textColor + #333;
 		}
 	}
 }
-
 .feature-img{
 	float:left;
 	border:1px solid #ccc;
 	background: white;
-	padding:4px;
+	padding:2px;
 	margin-right:10px;
-	margin-bottom: 10px;
+	margin-bottom:10px;
 }
-.sidebar-section{
-	.feature-text{
-		font-size:11px;
-		strong{
-			font-size:13px;
-		}
-	}
-}
-
-.caret-list{
-	list-style:none;
-	padding:0;
-	margin:0;
-	li{
-		&:before{
-			display:inline-block;
-			content:'\f0da';
-			margin-right:10px;
-			color: #e0ab2c;
-			font-family: 'FontAwesome';
-		}
-	}
-}
-
 .icons-list{
 	list-style:none;
 	ul{
 		list-style:none;
-		padding:0;
 		margin-bottom:20px;
 	}
 	li{
 		margin-bottom:5px;
 		&:before{
 			display:inline-block;
-			content: "\f01d";
-			margin-right:10px;
-			color: @themeColor;
+			content: "\f0da";
+			color: @caret;
 			width:16px;
 			height:20px;
 			font-family: 'FontAwesome';
@@ -1068,12 +1054,12 @@ ______________________*/
 	}
 	li{
 		&:before{
-			background:url(../images/icon-list.png) no-repeat 0 0;
-			width:16px;
-			height:15px;
-			font-family: 'FontAwesome';
-			margin-left:10px;
+			display:inline-block;
+			content: "\f0d9";
 			margin-right:0;
+			margin-left:10px;
+			font-family: 'FontAwesome';
+			vertical-align:middle;
 		}
 	}
 }
@@ -1090,9 +1076,10 @@ ______________________*/
 	}
 }
 .footer-bottom{
-	color: white;
-	padding:25px 15px 5px;
+	color: @themeColor;
+	padding:25px 15px 30px;
 	text-align:center;
+	border-top:2px solid @themeColor;
 	background:@footerBottom;
 }
 
@@ -1176,9 +1163,6 @@ ______________________*/
 }
 .black-text{
 	color:black !important;
-}
-.green-text{
-	color: @green !important;
 }
 .theme-text{
 	font-weight:bold;
@@ -1302,17 +1286,16 @@ h3{
 		}
 		
 	}
-}
-.tab-content{
-	.radius(0 6px 6px);
-}
-.rtl .tab-content{
-	.radius(6px 0 6px 6px);
-}
-
-.thumbnail-wrap .thumbnail{
+/***********************
+	Header Setting
+************************/
+.form-inline .form-group{
 	margin-bottom:10px;
 }
+
+}
+
+
 @media (max-width: 767px) {
 /***********************
 	Header Setting
@@ -1384,11 +1367,6 @@ h3{
 	width:auto;
 	margin:0;
 }
-.icons-list{
-	ul{
-		padding:0;
-	}
-}
 /***********************
 	Pagination Setting
 ************************/
@@ -1401,8 +1379,6 @@ h3{
 /***********************
 	Sidebar Setting
 ************************/
-#sidebar{
-}
 .list-style-bullets,
 .icons-list{
 	text-align:left;
@@ -1423,6 +1399,10 @@ h3{
 .icons-list{
 	padding:0 15px;
 }
+
+
+
+
 }
 @media (max-width: 479px) {
 /***********************

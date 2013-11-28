@@ -18,8 +18,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Category</title>
-    
+
+	<!-- Google Fonts -->    
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700' rel='stylesheet' type='text/css'>
+	<!-- Google Fonts -->
+
+
     <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
     <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css" />
     <link type="text/css" rel="stylesheet" href="css/font-awesome.css" />
@@ -37,12 +43,13 @@
     <![endif]-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/holder.js"></script>
     <script type="text/javascript" src="js/jquery.bxslider.js"></script>
     <script type="text/javascript">
 	$(function(){
-		slides = 6;
-	if ($(window).width() <= 979){
 		slides = 4;
+	if ($(window).width() <= 979){
+		slides = 3;
 		}
 	if($(window).width() <= 767){
 		slides = 2;
@@ -95,12 +102,7 @@
                 	<a href="#" class="logo"><img src="images/logo.png" alt="" /></a>
                 </div>
                 <div class="col-md-6 col-sm-5">
-                	<div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                          <button type="button" class="btn theme-btn"><span class="icon-search"></span></button>
-                        </span>
-                    </div>
+                	
                 </div>
                 <div class="col-md-2 col-sm-3">
 	                <a href="#" class="btn theme-btn">Advance Search</a>
@@ -132,507 +134,508 @@
     </div><!-- Header -->
     <div class="banner-wrap">
         <div class="container">
-            <div class="inner-section clearfix text-center">
-                <img class="pull-left" src="images/cartoon.png" alt="" />
-                <h1>Chicken Recipes</h1>
-                <p class="lead">Browse our collection of 30,000 chicken recipes, including quick-fix dinners for weeknights and creative meals to impress guests. </p>
+            <div class="row">	
+            	<div class="col-sm-3">
+                	<img src="images/chiken.png" alt="" />
+                </div>
+                <div class="col-sm-9">
+   	                <h1>Chicken Recipes</h1>
+                    <p class="lead">Browse our collection of 30,000 chicken recipes, including quick-fix dinners for weeknights and creative meals to impress guests. </p>
+                    <a class="theme-btn btn" href="#">View All</a>
+                </div>
+				            
             </div>
         </div>
     </div><!-- banner-wrap -->
-    <div class="slider-wrap">
-    	<div class="container">
-        	<div class="slider-section">
-                  <ul class="bxslider">
-                    <li><img src="images/product-1.jpg" /></li>
-                    <li><img src="images/product-2.jpg" /></li>
-                    <li><img src="images/product-3.jpg" /></li>
-                    <li><img src="images/product-4.jpg" /></li>
-                    <li><img src="images/product-1.jpg" /></li>
-                    <li><img src="images/product-2.jpg" /></li>
-                    <li><img src="images/product-3.jpg" /></li>
-                    <li><img src="images/product-4.jpg" /></li>
-                    <!-- items mirrored twice, total of 12 -->
-                  </ul>
-			</div>
-		</div>
+    <div class="search-wrap">	
+    	<div class="container text-center">
+        	<div class="row">
+            	<div class="col-sm-2 visible-lg visible-md"></div>
+                <div class="col-sm-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                          <button type="button" class="btn theme-btn">Search</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-3 text-left">
+                    <a href="#">Advance Search</a>
+                </div>
+            </div>
+            
+        </div>
     </div>
 </div>
 <!--header end -->
 <!--main start -->
 <div id="main-wrap">
-	<div class="container main-content">
+	<div class="container">
         <div id="main" class="row author-gallery-wrap author-gallery-wrap-2">
-        	<div class="col-md-9 col-sm-8" id="contents">
+        	<div class="col-sm-8" id="contents">
+            	<div class="box-header">
+	            	<h3>Most Popular Chicken Recipes</h3>
+                </div>
+                <div class="slider-wrap">
+                    <div class="container">
+                        <div class="slider-section">
+                              <ul class="bxslider">
+                                <li>
+                                    <div class="slider-content">
+                                        <img src="images/product-1.png" alt="" class="img-thumbnail">
+                                        <p>A crunchy chop salad gives roasted chicken...</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slider-content">
+                                        <img src="images/product-2.png" alt="" class="img-thumbnail">
+                                        <p>A crunchy chop salad gives roasted chicken...</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slider-content">
+                                        <img src="images/product-3.png" alt="" class="img-thumbnail">
+                                        <p>A crunchy chop salad gives roasted chicken...</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slider-content">
+                                        <img src="images/product-4.png" alt="" class="img-thumbnail">
+                                        <p>A crunchy chop salad gives roasted chicken...</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slider-content">
+                                        <img src="images/product-1.png" alt="" class="img-thumbnail">
+                                        <p>A crunchy chop salad gives roasted chicken...</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slider-content">
+                                        <img src="images/product-2.png" alt="" class="img-thumbnail">
+                                        <p>A crunchy chop salad gives roasted chicken...</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="slider-content">
+                                        <img src="images/product-3.png" alt="" class="img-thumbnail">
+                                        <p>A crunchy chop salad gives roasted chicken...</p>
+                                    </div>
+                                </li>
+                                <!-- items mirrored twice, total of 12 -->
+                              </ul>
+                        </div>
+                    </div>
+                </div>
                 <div class="theme-box">
-                	<div class="box-header">
-                    	<h3>Browse <span>More Recipes 5,013</span></h3>
+                    <h3>Browse more recipes 4,618</h3>
+                    <div class="sort-bar clearfix">
+                    	<div class="row">
+                            <div class="col-xs-6">
+                                <a href="#">Newest <span class="icon-caret-down"></span></a>
+                            </div>
+                            <div class="col-xs-6 text-right right-side-icons">
+                                <a href="#"><span class="icon-list-ul"></span></a>
+                                <a href="#"><span class="icon-windows"></span></a>
+                                <a href="#" class="active"><span class="icon-th"></span></a>
+                            </div>
+						</div>                        
                     </div>
                     <div class="box-body">
                     	<div class="inner-section">
-                            <div class="theme-tabs-wrap">
-                                <ul class="nav nav-tabs">
-                                    <li class="active"><a href="#tab-1" data-toggle="tab">Most Rated Jokes</a></li>
-                                    <li><a href="#tab-2" data-toggle="tab">Most Liked Jokes</a></li>
+                            <div class="thumbnail-wrap clearfix">
+                                <div class="thumbnail">
+                                    <img src="images/product-1.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-2.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-3.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-4.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-1.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-2.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-3.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-4.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-1.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-2.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-3.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-4.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-1.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-2.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-3.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-4.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-1.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-2.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-3.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                                
+                                <div class="thumbnail">
+                                    <img src="images/product-4.png" alt="" />
+                                    <div class="thumbnail-footer">
+	                                    <p>Masala Spiked Toast</p>
+                                        <p>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star"></a>
+                                            <a href="#" class="icon-star-empty"></a>
+                                            <span>(2012)</span>
+                                        </p>
+									</div><!-- thumbnail-footer -->
+                                </div><!-- thumbnail -->
+                            </div><!-- thumbnail-wrap clearfix -->
+                            <div class="text-right">
+                                <ul class="pagination theme-pagination">
+                                    <li><a href="#">Previous</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">Next</a></li>
                                 </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="tab-1">
-                                    	<div class="thumbnail-wrap clearfix">
-                                            <div class="thumbnail">
-                                                <img src="images/product-1.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-2.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-3.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-4.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                                                                        <div class="thumbnail">
-                                                <img src="images/product-1.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-2.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-3.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-4.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                                                                        <div class="thumbnail">
-                                                <img src="images/product-1.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-2.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-3.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-4.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                                                                        <div class="thumbnail">
-                                                <img src="images/product-1.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-2.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-3.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-4.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                                                                        <div class="thumbnail">
-                                                <img src="images/product-1.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-2.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-3.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-4.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                                                                        <div class="thumbnail">
-                                                <img src="images/product-1.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-2.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-3.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-4.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                                                                        <div class="thumbnail">
-                                                <img src="images/product-1.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-2.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-3.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                            
-                                            
-                                            <div class="thumbnail">
-                                                <img src="images/product-4.jpg" alt="" />
-                                                <p><strong>Ham It Up Morning Sandwich</strong></p>
-                                                <p>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star"></a>
-                                                    <a href="#" class="icon-star-empty"></a>
-                                                    <span>(5,756)</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="pagination-wrap">
-                                            <ul class="theme-pagination text-right">
-                                                <li><a href="#" class="icon-chevron-left disabled"></a></li>
-                                                <li class="active"><a href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#">4</a></li>
-                                                <li><a href="#">5</a></li>
-                                                <li><a href="#">6</a></li>
-                                                <li><a href="#">7</a></li>
-                                                <li><a href="#" class="icon-chevron-right"></a></li>
-                                            </ul>
-	                                    </div>
-                                    </div><!-- tab-pane -->
-                                    <div class="tab-pane" id="tab-2">TAb Content Here...</div>
-                                </div>
                             </div>
-                            
-                            
                         </div><!-- inner-section -->
                     </div><!-- box-body -->
                 </div><!-- theme-box  -->
                 
                 
                 
-            </div><!-- col-sm-9 -->
-            <aside id="sidebar" class="col-md-3 col-sm-4">
+            </div><!-- col-sm-8 -->
+            <aside id="sidebar" class="col-sm-4">
             	<div class="sidebar-section">
-                	<img src="images/ad-1.jpg" alt="" />
+                	<h3>What everyone's cooking</h3>
+                    <div class="theme-tabs-wrap">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab-1" data-toggle="tab">Most Rated Recipes</a></li>
+                            <li><a href="#tab-2" data-toggle="tab">Recently Added</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab-1">
+                                <div class="feature-section clearfix">
+                                    <div class="feature-img">
+                                        <img src="images/thumb-small.png" alt=""	 />
+                                    </div>
+                                    <div class=" feature-text">
+                                        <h5>Snapper Deal</h5>
+                                        <p><span>By</span> Katy Greenwood</p>
+                                        <p>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star-empty" href="#"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="feature-section clearfix">
+                                    <div class="feature-img">
+                                        <img src="images/thumb-small.png" alt=""	 />
+                                    </div>
+                                    <div class=" feature-text">
+                                        <h5>Snapper Deal</h5>
+                                        <p><span>By</span> Katy Greenwood</p>
+                                        <p>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star-empty" href="#"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="feature-section clearfix">
+                                    <div class="feature-img">
+                                        <img src="images/thumb-small.png" alt=""	 />
+                                    </div>
+                                    <div class=" feature-text">
+                                        <h5>Snapper Deal</h5>
+                                        <p><span>By</span> Katy Greenwood</p>
+                                        <p>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star" href="#"></a>
+                                            <a class="icon-star-empty" href="#"></a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="#" class="theme-btn btn">View All</a> 
+                            </div><!-- tab-pane -->
+                            <div class="tab-pane" id="tab-2">
+                            	CONTENT2
+                            </div><!-- tab-pane -->
+                        </div><!-- tab-content -->
+                    </div><!-- theme-tabs-wrap -->
                 </div>
                 <div class="sidebar-section">
-	                <h3><span>Video</span></h3>
-                    <a class="thumbnail">
-                    	<img src="images/ad-1.jpg" alt="" class="img-dull" />
-                        <i class="icon-youtube-play"></i>
-                    </a>
-                </div><!-- sidebar-section -->
-                <div class="sidebar-section">
-                    <h3><span>Menu</span> Highlights</h3>
-                    <div class="feature-section clearfix">
-                    	<div class="feature-img">
-                        	<img src="images/thumb-small.jpg" alt=""	 />
-                        </div>
-                        <div class=" feature-text">
-                            <p><strong>Healty sandwich</strong></p>
-                            <p>Whip up one of these recipes in the a.m. and you'll be richly </p>
-                        </div>
-                        	
-                    </div>
-                    
-                    <div class="feature-section clearfix">
-                    	<div class="feature-img">
-                        	<img src="images/thumb-small.jpg" alt=""	 />
-                        </div>
-                        <div class=" feature-text">
-                            <p><strong>Healty sandwich</strong></p>
-                            <p>Whip up one of these recipes in the a.m. and you'll be richly </p>
-                        </div>
-                        	
-                    </div>
-                    
-                    
-                    <div class="feature-section clearfix">
-                    	<div class="feature-img">
-                        	<img src="images/thumb-small.jpg" alt=""	 />
-                        </div>
-                        <div class=" feature-text">
-                            <p><strong>Healty sandwich</strong></p>
-                            <p>Whip up one of these recipes in the a.m. and you'll be richly </p>
-                        </div>
-                        	
-                    </div>
-                    
+                    	<img class="img-thumbnail" src="holder.js/100%x280" alt=""/>
                 </div><!-- sidebar-section -->
                 <div class="sidebar-section">
                     <h3><span>Find us on</span>  facebook</h3>
-                	<img src="images/fb-members.jpg" alt="" />
+                	<img src="images/fb-members.png" alt="" />
                 </div><!-- sidebar-section -->
                 
             </aside><!--sidebar -->
@@ -650,53 +653,64 @@
 	<footer id="footer">
 		<div class="container">
         	<div class="row inner-section">
-            	<div class="col-md-2 col-sm-3 icons-list">
+            	<div class="col-sm-4 icons-list">
                 	<h3>Links</h3>
-                    <ul	class="list-unstyled">
-                        <li><a href="#">WHAT'S NEW</a></li>
-                        <li><a href="#">TOP RECIPES</a></li>
-                        <li><a href="#">HOLIDAYS</a></li>
-                        <li><a href="#">MEAL PLANNING</a></li>
-                        <li><a href="#">TALKS & TIPS</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-sm-3">
-                	<h3>Working Hours Box Title</h3>
-                    <div class="feature-section">
-                        <div class="feature-text">
-                        	<p class="theme-text">Breakfast</p>
-                            <p>Bill Cosby's New Special to air on Comedy Central</p>
-                            <p>"Far From Finished" debuts; . November 23.</p>
-                        </div>
-                    </div>
-                    <div class="feature-section">
-                        <div class="feature-text">
-                        	<p class="theme-text">Breakfast</p>
-                            <p>Bill Cosby's New Special to air on Comedy Central</p>
-                            <p>"Far From Finished" debuts; . November 23.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-3">
-                	<h3>News & Events</h3>
-                    <div class="row icons-list">
+                   	<div class="row icons-list">
                         <ul class="list-unstyled col-md-6">
-                            <li><a href="#">Fruits and vegetables</a></li>
-                            <li><a href="#">Seafood</a></li>
-                            <li><a href="#">Meat</a></li>
-                            <li><a href="#">Entrees</a></li>
-                            <li><a href="#">Pizza and pasta</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Recipes</a></li>
+                            <li><a href="#">Cuisines</a></li>
+                            <li><a href="#">Food Type</a></li>
+                            <li><a href="#">Integridents</a></li>
+                            <li><a href="#">Submit a Recipe</a></li>
+                            <li><a href="#">What’s New</a></li>
+                            <li><a href="#">Top Recipes</a></li>
                         </ul>
                         <ul class="list-unstyled col-md-6">
-                            <li><a href="#">Fruits and vegetables</a></li>
-                            <li><a href="#">Seafood</a></li>
-                            <li><a href="#">Meat</a></li>
-                            <li><a href="#">Entrees</a></li>
-                            <li><a href="#">Pizza and pasta</a></li>
+                            <li><a href="#">Video Recipes</a></li>
+                            <li><a href="#">Holidays</a></li>
+                            <li><a href="#">Meal Planning</a></li>
+                            <li><a href="#">Talks & Tips</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Terms and conditions of use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
                         </ul>
 					</div>
                 </div>
-                <div class="col-md-2 col-sm-3 ">
+                <div class="col-sm-4">
+                	<h3>News & Events</h3>
+                    <div class="row icons-list">
+                        <ul class="list-unstyled col-md-6">
+                            <li><a href="#">Mexican Recipes</a></li>
+                            <li><a href="#">Chinese Recipes</a></li>
+                            <li><a href="#">Australian Recipes</a></li>
+                            <li><a href="#">Breakfast Recipes</a></li>
+                            <li><a href="#">Greek Recipes</a></li>
+                            <li><a href="#">Restaurant Recipes</a></li>
+                            <li><a href="#">Italian Recipes</a></li>
+                            <li><a href="#">Christmas Recipes</a></li>
+                        </ul>
+                        <ul class="list-unstyled col-md-6">
+                            <li><a href="#">Deep Fried Recipes</a></li>
+                            <li><a href="#">Thai Recipes</a></li>
+                            <li><a href="#">Low Cholesterol Recipes</a></li>
+                            <li><a href="#">Indian Recipes</a></li>
+                            <li><a href="#">Healthy Recipes</a></li>
+                            <li><a href="#">Thanksgiving Recipes</a></li>
+                            <li><a href="#">Southern Recipes</a></li>
+                            <li><a href="#">Dessert Recipes</a></li>
+                        </ul>
+					</div>
+                </div>
+                <div class="col-sm-4 ">
+	                <h3>Email news letter</h3>
+                    <p>Get the latest recipes and tips delivered right to your inbox</p>
+                    <form role="form" class="form-inline">
+                        <div class="form-group">
+                        <input type="email" placeholder="Enter email" id="exampleInputEmail2" class="form-control input-transparent">
+                      </div>
+                       <button class="btn theme-btn" type="submit">Subscribe</button>
+                    </form>
                 	<h3>Fllow us on</h3>
                     <div class="social-icons">
                         <a class="facebook" href="#"><span class="icon-facebook"></span></a>
@@ -705,13 +719,7 @@
                         <a class="youtube" href="#"><span class="icon-youtube"></span></a>
                         <a class="google-plus" href="#"><span class="icon-google-plus"></span></a>
                     </div>
-                    <h3>Email news letter</h3>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                          <button class="btn theme-btn" type="button">Submit</button>
-                        </span>
-                    </div>
+                    
                     
                 </div>
             </div>
