@@ -62,13 +62,6 @@
 .rtl .navbar-nav > li {
   float: right;
 }
-.rtl .navbar-nav > li > a {
-  border-right: 1px solid black;
-  border-left: none;
-}
-.rtl .navbar-nav > li:first-child a {
-  border-right: none;
-}
 .rtl .col-md-6 {
   padding-right: 15px;
 }
@@ -89,9 +82,6 @@
 }
 .rtl .navbar-right {
   float: left !important;
-}
-.rtl .navbar-nav {
-  float: right;
 }
 .rtl .slider-wrap {
   direction: ltr;
@@ -202,6 +192,9 @@
 .rtl .left-image-section .img-section {
   float: right;
   margin: 0 0 15px 20px;
+}
+.rtl .btn-group > .btn {
+  float: right;
 }
 .rtl .btn-group > .btn:last-child:not(:first-child),
 .rtl .btn-group > .dropdown-toggle:not(:first-child) {

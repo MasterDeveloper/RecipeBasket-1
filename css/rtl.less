@@ -23,14 +23,12 @@
 .icon-chevron-right:before {content: '\f053';}
 .icon-chevron-left:before { content: "\f054";}
 .navbar-nav{ padding-right:0; > li{ float:right;}}
-.navbar-nav > li{ > a{border-right:1px solid black; border-left: none;} &:first-child{ a{ border-right:none;}}}
 .col-md-6{padding-right:15px;}
 .navbar-toggle{float:left; margin-left:15px;}
 .navbar-header{float: right;}
 .container > .navbar-header, .container > .navbar-collapse{margin:0 -15px;}
 .navbar > .container .navbar-brand{margin-right:15px;margin-left:0;}
 .navbar-right{float:left !important;}
-.navbar-nav{float:right;}
 .slider-wrap{direction:ltr; text-align:right;}
 .list-unstyled{padding-right:0;}
 .nav-tabs{padding:0;}
@@ -128,7 +126,9 @@
 	float:right;
 	margin:0 0 15px 20px;
 }
-
+.btn-group > .btn{
+	float:right;
+}
 .btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child){
 	.radius(7px 0 0 7px);
 }

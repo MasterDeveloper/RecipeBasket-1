@@ -58,8 +58,17 @@ h1{.heading( normal,  35px,  @altFamily, @headingsColor, 0 0 10px);
 }
 h2{.heading( normal,  33px,  @altFamily, @SubheadingsColor, 0 0 10px);}
 h3{.heading( bold,  25px,  @baseFamily, @themeColor, 0 0 10px);}
-h4{.heading( normal,  21px,  @altFamily, @themeColor, 0 0 10px);}
-h5{.heading( normal,  14px,    @baseFamily, black, 0 0 10px); text-transform:uppercase;}
+h4{.heading( normal,  23px,  @baseFamily, @themeColor, 0 0 10px);}
+h5{.heading( normal,  14px,    @secFamily, black, 0 0 10px);}
+
+
+.detailed-recipe{
+	font-family: @secFamily;
+	h3{
+		font-size:23px;
+		font-family:@thirdFamily;
+	}
+}
 
 /* Links
 ______________________*/
@@ -125,7 +134,6 @@ a.thumbnail{
 .rate-it{
 	> span{
 		margin-right:10px;
-		line-height:32px;
 	}
 }
 /************************
@@ -148,9 +156,7 @@ ______________________*/
 	border-bottom:1px solid @themeColor;
 	position:relative;
 	.btn{
-		line-height:1;
 		min-width:80px;
-		margin-left:10px;
 	}
 	span{
 		display:inline-block;
@@ -181,7 +187,7 @@ ______________________*/
 	}
 }
 .logo-wrap{
-	margin:20px 0 10px;
+	margin:-10px 0 -40px -15px;
 	> div{
 		margin:15px 0;
 	}
@@ -192,54 +198,86 @@ ______________________*/
 /* Navigation
 ______________________*/
 .navbar{
-	.gradient(#1d1c1c, #2c2c2c);
-	border:1px solid black;
+	background:#ffc000;
 	margin-bottom:0;
 	.radius(0);
 	.box-shadow(0 1px 0 0 rgba(255,255,255,0.5) inset);
 }
 .navbar{
-@color: white;
-@hovercolor: @themeColor;
+@color: @navbar;
+@hovercolor: @navbar;
+margin-right:65px;
+margin-left:15px;
 	.navbar-nav {
 		> li{
-			background:url(../images/nav-divider.png) no-repeat left center;
 			> a{
 				color:@color;
 				text-transform:uppercase;
 				font-size:13px;
+				min-width:90px;
 				text-shadow: none;
+				padding:5px 20px;
+				text-align:center;
+				margin:10px 5px;
+				.radius(50px);
 				&:focus,
 				&:hover{
-					background:none;
+					background:white;
 					color: @hovercolor;
 				}
 			}
 			&.active{
 				> a{
-					background:none;
+					background:white;
 					color: @hovercolor;
 				}
 			}
-			&:first-child{
-				background:none;
-			}
 		}
 	}
+	.right-corner{
+		position:absolute;
+		background:url(../images/nav-right-corner.png) no-repeat;
+		width:85px;
+		height:66px;
+		left:100%;
+		top:10px;
+		margin-left:-20px;
+	}
 }
+
 .navbar-collapse{
 	padding:0;
 }
+.rtl .navbar{
+	margin-right: 15px;
+	margin-left:65px;
+	.right-corner{
+		background:url(../images/nav-right-corner-rtl.png) no-repeat;
+		left:auto;
+		right:100%;
+		margin-left:0;
+		margin-right:-20px;
+	}
+}
+.bx-wrapper .bx-controls-direction a{
+	color:transparent;
+}
+
+
 /************************
 	Banner Settings 
 *************************/
 .banner-wrap{
-	background:url(../images/banner.png);
+	background:url(../images/banner.png) no-repeat center top;
+	background-size: auto 100%;
 	color:white;
-	padding:20px 0;
+	padding:40px 0;
 	margin:0 auto;
 	p{
 	}
+}
+.alt-font{
+	font-family:@altFamily;
 }
 
 /******************************
@@ -253,57 +291,68 @@ ______________________*/
 			font-family:@baseFamily;
 		}
 	}
-
+	.left-column{
+		padding:0 10px 0 0;
+		border-right:1px solid @borderColor;
+	}
+	.right-column{
+		padding:0 0 0 10px;
+	}
 }
-.left-image-section{
+
+.recipe-section{
 	margin-bottom:14px;
-	padding:4px;
 	.img-section{
-		float:left;
 		position:relative;
-		margin-right:20px;
+		margin-bottom:8px;
+		padding:4px;
+		border:1px solid @borderColor;
+		img{
+			width:100%;
+		}
 	}
 	.recipe-label{
 		color:white;
-		background:url(../images/label-bg.png) repeat-x;
-		padding:10px;
-		height:34px;
+		background:#2f84fb;
+		padding:8px 20px 6px;
+		height:32px;
 		display:inline-block;
+		font-weight:bold;
 		position:absolute;
-		left:0;
-		bottom:0;
+		right:4px;
+		bottom:4px;
 		margin-bottom:0;
-		&:before{
-			display:inline-block;
-			content:"";
-			background:url(../images/label-corner.png) no-repeat;
-			position:absolute;
-			height:34px;
-			width:15px;
-			left:100%;
-			top:0;
-			left:100%
-		}
+		.radius(6px 0 0);
 	}
 	p{
 		font-size:13px;
+		margin-bottom:5px;
 	}
 	.total-reviews{
-		color:#f70000;
+		color:@themeColor;
 		margin-right: 20px;
 	}
 	.icon-eye-open{
-		color: #ffb2b2;
+		color: #7cabed;
 		margin-right:5px
+	}
+	h4{
+		margin-bottom:5px;
 	}
 	h5{
 		color:black;
 		margin-bottom:5px;
 		line-height:1.3;
+		font-weight:bold;
 	}
-	h4{
-		color:#80807f;
+}
+.recipe-section{
+	.recipe-label{
+		right:auto;
+		left:4px;
+		.radius(0 6px 0 0);
 	}
+	
 }
 
 .thumbnail-wrap .thumbnail{
@@ -352,7 +401,7 @@ ______________________*/
 .theme-pagination{
 	> li > a{
 		border-color: @borderColor;
-		padding:4px 12px 7px;
+		padding:8px 12px 7px;
 		.gradient(white, #dfdede);
 	}
 	> .active{
@@ -399,7 +448,7 @@ ______________________*/
 	 Theme Tabs
  **********************/
 .theme-tabs-wrap{
-	padding:20px 10px 10px;
+	margin-bottom:25px;
 }
 .nav-tabs {
 	border-bottom:none;
@@ -443,6 +492,7 @@ ______________________*/
 .tab-content{
 	padding:15px 9px 10px;
 	background:white;
+	.radius(0 6px 6px);
 	h3{
 		color:@themeColor;
 	}
@@ -489,8 +539,9 @@ ______________________*/
 
 
 .btn-gray{
-	background:#e6e5e5;
+	background:#f2f2f2;
 	color:#272727;
+	border: 1px solid @borderColor;
 	[class^="icon-"]{
 		color:@themeColor;
 	}
@@ -499,7 +550,7 @@ ______________________*/
 	[class^="icon-"]{
 		color:@themeColor;
 		display:block;
-		font-size:2em;
+		font-size:1.4em;
 	}
 }
 
@@ -512,12 +563,6 @@ ______________________*/
 	&:hover{
 		color:@themeColor;
 	}
-}
-.btn-blue{
-	background:#3d9cb8;
-	.box-shadow(none);
-	color:white;
-
 }
 
 .theme-btn{
@@ -535,8 +580,130 @@ ______________________*/
 		line-height:1;
 	}
 }
+.btn-group{
+	.btn-blue:first-child{
+		border-left:none;
+	}
+	.btn-blue{
+		border-left:1px solid #1586df;
+	}
+}
+.btn-blue:focus,
+.btn-blue:hover,
+.btn-blue{
+	background:@themeColor-2;
+	.box-shadow(none);
+	color:white;
+	
+}
+
 .btn-row{
 	margin-bottom:25px;
+}
+
+.btn-register{
+	color:white;
+	position:relative;
+	overflow:visible;
+	background:#0f3158;
+	padding-top:5px;
+	padding-bottom: 5px;
+	.radius(0);
+	&:focus,
+	&:hover{
+		color:#2e85c8;
+	}
+	.left-corner{
+		background:url(../images/left-btn-corner.png) left top no-repeat;
+		position:absolute;
+		height:31px;
+		width:11px;
+		top:0;
+		right:100%;
+		margin-right:1px;
+		
+	}
+	.right-corner{
+		background:url(../images/left-btn.png) left top no-repeat;
+		position:absolute;
+		height:31px;
+		width:20px;
+		top:0;
+		left:100%;
+		margin-left:1px;
+	}
+}
+.btn-login{
+	color:white;
+	position:relative;
+	overflow:visible;
+	background:#2e85c8;
+	padding-top:5px;
+	padding-bottom: 5px;
+	margin-left:20px;
+	.radius(0);
+	&:focus,
+	&:hover{
+		color:#0f3158;
+	}
+	.left-corner{
+		background:url(../images/right-btn.png) left top no-repeat;
+		position:absolute;
+		height:31px;
+		width:20px;
+		top:-1px;
+		right:100%;
+		margin-right:1px;
+		
+	}
+	.right-corner{
+		background:url(../images/right-btn-corner.png) left top no-repeat;
+		position:absolute;
+		height:31px;
+		width:11px;
+		top:0;
+		left:100%;
+		margin-left:1px;
+	}
+}
+
+
+.rtl{
+	.btn-login{
+		margin-left:0;
+		margin-right:20px;
+		.left-corner{
+			background:url(../images/right-btn-rtl.png) left top no-repeat;
+			right:auto;
+			left:100%;
+			margin-right:0;
+			
+		}
+		.right-corner{
+			background:url(../images/right-btn-corner-rtl.png) left top no-repeat;
+			left:auto;
+			right:100%;
+			margin-left:1px;
+		}
+	}	
+
+
+
+.btn-register{
+	.left-corner{
+		background:url(../images/left-btn-corner-rtl.png) left top no-repeat;
+		right:auto;
+		left:100%;
+		margin-right:0;
+		
+	}
+	.right-corner{
+		background:url(../images/left-btn-rtl.png) left top no-repeat;
+		left:auto;
+		right:100%;
+		margin-left:0;
+	}
+}
 }
 .btn-section{
 	.btn{
@@ -551,6 +718,7 @@ ______________________*/
 		.gradient(#116CC9, #0C60B4);
 	}
 }
+
 .rtl{
 	.btn-section{
 		.btn{
@@ -567,7 +735,13 @@ ______________________*/
 		}
 }
 
+
+
+.slider-egg{
+	direction:ltr
 }
+}
+
 .home-slider{
 	border:8px solid white;
 	padding:0;
@@ -662,6 +836,10 @@ ______________________*/
 		}
 	}
 }
+
+
+
+
 /**********************************
 		Sidebar Settings 
 ***********************************/
@@ -698,6 +876,11 @@ ______________________*/
 }
 .icon-star{
 	color: @starActive;
+}
+.btn{
+	.icon-star{
+		color: inherit;
+	}
 }
 .fb-like-wrap{
 	padding:15px 0;
@@ -742,12 +925,12 @@ ______________________*/
 }
 
 .thumbnail-wrap{
-	margin-right:-19px;
+	margin-right:-7px;
 	text-align:center;
 	.thumbnail{
 		text-align:left;
 		border: 1px solid #dfdfdf;
-		width:184px;
+		width:180px;
 		margin-bottom:19px;
 		margin-right:6px;
 		*margin-right:9px;
@@ -779,15 +962,28 @@ ______________________*/
 	.thumbnail{
 		padding:0;
 		border:none;
-		margin-right:12px;
+		margin-right:18px;
+		width:158px;
 		img{
 			border:1px solid @borderColor;
 			padding:4px;
+			margin-bottom:5px;
 		}
 		strong{
 			color:black;
 		}
 	}
+}
+.bx-wrapper{
+.bx-prev:hover,
+.bx-prev{
+		background:url(../images/chevron.png) no-repeat center center;
+}
+.bx-next:hover,
+.bx-next{
+		background:url(../images/chevron-right.png) no-repeat center center;
+}
+
 }
 .slider-wrap{
 	margin-bottom:20px;
@@ -801,13 +997,17 @@ ______________________*/
 	}
 	.bx-prev:hover,
 	.bx-prev{
-		background:url(../images/slider-prev.png) no-repeat center center;
-		font-size:0;
+		background:url(../images/chevron.png) no-repeat center center;
+		line-height:29px;
+		margin-top:-0.5em !important;
+		left:-35px;
 	}
 	.bx-next:hover,
 	.bx-next{
-		background:url(../images/slider-next.png) no-repeat center center;
-		font-size:0;
+		background:url(../images/chevron-right.png) no-repeat center center;
+		line-height:29px;
+		margin-top:-0.5em !important;
+		right:-35px;
 	}
 }
 
@@ -859,17 +1059,40 @@ ______________________*/
 	border-bottom:1px solid @footerbg;
 	.box-shadow(0 1px 0 0 #4d97f9 inset, 0 -1px 0 0 #4d97f9 inset;);
 	padding:10px 0;
+	.input-lg:focus,
+	.input-lg{
+		border-color: #2370ac;
+		border-right-color:transparent;
+	}
 	a{
-		line-height:30px;
+		line-height:46px;
 		color:white;
+		font-size:20px;
 	}
 }
 
 
 .border-section{
-	background:url(../images/border-pattren.png) repeat-x;
-	padding-top:23px;
 	min-height:90px;
+	border-bottom:1px dotted @themeColor;
+	padding:0 0 10px;
+	margin: 0 0 20px;
+}
+.step{
+	margin-bottom:25px;
+}
+.reviews-wrap{
+	p{
+		line-height:1.5;
+		margin:10px 0;
+		color: @textColor + #333;
+	}
+	h5{
+		font-weight:bold;
+	}
+	.feature-text{
+		margin-top:5px;
+	}
 }
 .list-dotted{
 	li{
@@ -1002,7 +1225,6 @@ ______________________*/
 }
 
 .feature-section{
-	margin-bottom:10px;
 	.feature-text{
 		margin-top:9px;
 		color:#010101;
@@ -1081,11 +1303,6 @@ ______________________*/
 	text-align:center;
 	border-top:2px solid @themeColor;
 	background:@footerBottom;
-}
-
-
-.container{
-	overflow:hidden;
 }
 
 
@@ -1168,6 +1385,11 @@ ______________________*/
 	font-weight:bold;
 	color: @themeColor;
 }
+.text-red{
+	color:@readmore;
+}
+
+
 .fl{ float:left}
 .fr{ float:right}
 .cl{ clear:both; font-size:0; height:0; }
@@ -1224,7 +1446,17 @@ h3{
 .nav-tabs > li > a{
 	padding:6px 11px 3px;
 }
-
+.navbar .navbar-nav > li > a {
+    border-radius: 50px;
+    color: #003399;
+    font-size: 13px;
+    margin: 12px 1px;
+    min-width: inherit;
+    padding: 3px 10px;
+    text-align: center;
+    text-shadow: none;
+    text-transform: uppercase;
+}
 }
 @media (max-width: 979px) {
 /***********************
@@ -1241,6 +1473,13 @@ h3{
 .navbar > .container .navbar-brand{
 	width:200px;
 }
+
+.navbar .navbar-nav > li > a {
+    padding: 2px 7px;
+    text-transform: capitalize;
+}
+
+
 /***********************
 	buttons Setting
 ************************/
@@ -1309,6 +1548,8 @@ h3{
 
 .navbar .navbar-nav > li > a{
 	border:none;
+	margin:0;
+	text-align:inherit;
 }
 .navbar .navbar-nav {
 	margin:0;
@@ -1340,12 +1581,10 @@ h3{
 }
 
 .logo{
-	margin-top:10px;
 	width:250px;
 }
-.login-section{
-	padding:0;
-}
+
+
 .rtl{
 	.navbar-nav > {
 		li{
@@ -1367,6 +1606,20 @@ h3{
 	width:auto;
 	margin:0;
 }
+.slider-wrap .bx-prev:hover,
+.slider-wrap .bx-prev{
+	left:0;
+}
+.slider-wrap .bx-next:hover,
+.slider-wrap .bx-next{
+	right:0;
+}
+
+.btn-group-vertical{
+	display:block;
+}
+
+
 /***********************
 	Pagination Setting
 ************************/
@@ -1425,6 +1678,11 @@ h3{
 	margin-bottom:5px;
 	&.social-icon{
 		float:none !important;
+	}
+}
+.btn-group-vertical{
+	.btn{
+		margin-bottom:0;
 	}
 }
 .input-group-btn {
